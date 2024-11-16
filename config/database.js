@@ -24,12 +24,12 @@ module.exports = ({ env }) => {
     },
     postgres: {
       connection: {
-        connectionString: env('DATABASE_URL'),
-        host: env('DATABASE_HOST', 'localhost'),
-        port: env.int('DATABASE_PORT', 5432),
-        database: env('DATABASE_NAME', 'strapi'),
-        user: env('DATABASE_USERNAME', 'strapi'),
-        password: env('DATABASE_PASSWORD', 'strapi'),
+        connectionString: env('postgresql://postgres.kkrmodpkmbstkmxsdzag:xV06QXeAtD9DuQxH@aws-0-eu-central-1.pooler.supabase.com:6543/postgres'),
+        host: env('DATABASE_HOST', 'aws-0-eu-central-1.pooler.supabase.com'),
+        port: env.int('DATABASE_PORT', 6543),
+        database: env('DATABASE_NAME', 'postgres'),
+        user: env('DATABASE_USERNAME', 'postgres.kkrmodpkmbstkmxsdzag'),
+        password: env('DATABASE_PASSWORD', 'xV06QXeAtD9DuQxH'),
         ssl: env.bool('DATABASE_SSL', false) && {
           key: env('DATABASE_SSL_KEY', undefined),
           cert: env('DATABASE_SSL_CERT', undefined),
